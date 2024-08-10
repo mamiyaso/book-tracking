@@ -1,18 +1,26 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import Home from '../views/Home.vue'
+import AddBook from '../views/AddBook.vue'
+import BookDetails from '../views/BookDetails.vue'
 
 const router = createRouter({
-  history: createWebHashHistory(import.meta.env.BASE_URL),
+  history: createWebHashHistory('/book-tracking/'),
   routes: [
-    {
+    { 
       path: '/',
       name: 'home',
-      component: HomeView
+      component: Home 
     },
-    {
-      path: '/about',
-      name: 'about',
-      component: () => import('../views/AboutView.vue')
+    { 
+      path: '/add',
+      name: 'add',
+      component: AddBook 
+    },
+    { 
+      path: '/book/:id',
+      name: 'bookDetails',
+      component: BookDetails,
+      props: true 
     }
   ]
 })
