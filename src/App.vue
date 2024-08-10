@@ -8,10 +8,10 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <router-link class="nav-link" to="/book-tracking/home">Ana Sayfa</router-link>
+              <router-link class="nav-link" :to="{ name: 'home' }">Ana Sayfa</router-link>
             </li>
             <li class="nav-item">
-              <router-link class="nav-link" to="/book-tracking/add">Yeni Kitap Ekle</router-link>
+              <router-link class="nav-link" :to="{ name: 'add' }">Yeni Kitap Ekle</router-link>
             </li>
           </ul>
         </div>
@@ -29,6 +29,7 @@
     </footer>
   </div>
 </template>
+
 
 <script>
 export default {
